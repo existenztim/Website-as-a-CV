@@ -1,17 +1,16 @@
 /* ==========================================================================
    Tim Sundell HTML with CSS. This will be the base CSS file once sass has
-   been applied. 
+   been applied.
    ========================================================================== */
 
-:root {
-    --blue:  #041e42;
+   :root {
     --blue:  #3d74a8;
     --white: #f7f7f7;
     --gray:  #3d3f42;
     --lightgray: #dfdede88;
     --black: #181616;
     }
-    
+   
 html {
     box-sizing: border-box; /*ta bort?*/
     }
@@ -21,8 +20,9 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
-    
+   
 body {
     background-color: var(--white);
     line-height: 1.6rem;
@@ -32,44 +32,53 @@ body {
 }
 
 .page-container {
-    display: grid; 
-    grid-template-columns: 0.8fr 1fr 1fr 0.8fr; 
-    grid-template-rows: 0.5fr 0.5fr 1fr 0.3fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr 0.8fr;
+    gap: 0px 0px;
+    grid-template-areas:
       "header header header header"
       "aside-start introduction introduction aside-end"
       "aside-start occupation occupation aside-end"
-      "footer footer footer footer"; 
+      "footer footer footer footer";
     background-color: var(--white);
     background-image: url(/img/hexagon.jpg);
     background-size: cover;
 }
 
-
-.aside-start { 
-    grid-area: aside-start; 
-    background-color: var(--gray);
+article {
+    padding: 1rem;
 }
 
-.occupation { 
-    grid-area: occupation; 
+article p{
+    padding: 1rem;
 }
 
-.occupation img { 
-    width: 200px;
-    height: 100px;
+article ul{
+    list-style: none;
 }
-.footer { 
-    grid-area: footer; 
-    background-color: #f7f7f7;
+h2::first-letter {
+    color: var(--blue);
+    font-size: 2rem;
+}
+
+.hidden-content {
+    display: none; /*To make outline look good*/
+}
+
+table {
+    border: 5px solid;
+    padding: 0.5rem;
+    border-radius: 2rem;
 }
 
 /* ==========================================================================
    Header
    ========================================================================== */
-.header { 
-    grid-area: header; 
+.header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
 
 .logo-container {
@@ -80,21 +89,21 @@ body {
     top: 0;
     background: rgb(61,63,66);
     background: radial-gradient(circle, rgba(61,63,66,1) 0%, rgba(24,22,22,1) 100%);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
-    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
     rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.portrait-container { 
-	height: calc(150px + 6vw);
-	width: calc(150px + 6vw);
-	border: calc(2px + 0.2vw) solid transparent;
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	background-size: cover;
-	box-sizing: border-box;
+.portrait-container {
+    height: calc(125px + 6vw);
+    width: calc(125px + 6vw);
+    border: calc(2px + 0.2vw) solid transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-size: cover;
+    box-sizing: border-box;
     position: absolute;
     max-width: 300px;
     max-height: 300px;
@@ -102,9 +111,9 @@ body {
     right: 0;
     margin: 0 auto;
     top: 10rem;
-	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: 40%;
-	background-image: url(/img/portraitme.jpg), linear-gradient(#cad6ce, #120a2e); /*might redo and import as IMG in html*/
+    background-image: url(/img/portraitme.jpg), linear-gradient(#cad6ce, #120a2e); /*might redo and import as IMG in html*/
 }
 
 .signature-img {
@@ -136,15 +145,19 @@ color: var(--blue);
 /* ==========================================================================
    Introduction
    ========================================================================== */
-.introduction { 
-    grid-area: introduction; 
+.introduction {
+    grid-area: introduction;
     padding: 2rem;
     padding-block-start: 8rem;
-    max-width: 700px;
+    max-width: calc(100% - 200px); /*Full size - image size of 200px*/
 }
 /* ==========================================================================
    Aside inline start (left column)
    ========================================================================== */
+.aside-start {
+    grid-area: aside-start;
+    background-color: var(--gray);
+}
 
 .personal-info {
     border: 2px solid var(--blue);
@@ -173,6 +186,15 @@ color: var(--blue);
 /* ==========================================================================
    Occupation (might rename to experience)
    ========================================================================== */
+.occupation {
+    grid-area: occupation;
+}
+
+.occupation img {
+    width: 200px;
+    height: 100px;
+}
+
 .flex-container {
     display: flex;
     align-items: center;
@@ -181,17 +203,18 @@ color: var(--blue);
 
 .bold-paragraph {
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .bold-paragraph::before {
-    content: '\f075'; /*Content code for phone*/
+    content: "\f054";/*Content code for phone*/
     font: var(--fa-font-solid);
 }
 /* ==========================================================================
    Aside inline end (right column)
    ========================================================================== */
-.aside-end { 
-    grid-area: aside-end; 
+.aside-end {
+    grid-area: aside-end;
     background-color: var(--lightgray);
 }
 
@@ -200,15 +223,23 @@ color: var(--blue);
 }
 
 tr:nth-child(odd) {
-    background-color: #636363;
+    background-color: #918f8f;
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
+.footer {
+    grid-area: footer;
+    height: 5rem;
+}
+
+
 .contact-me {
     text-align: center;
+    background-color: var(--white);
     width: 100%;
+    height: 5rem;
     padding: 10px;
     bottom: 0;
     border-top: 1px solid var(--black);
@@ -225,3 +256,34 @@ tr:nth-child(odd) {
 a:link, a:visited, a:active {
     color: var(--blue);
 }
+/* ==========================================================================
+   Media queries
+   ========================================================================== */
+@media only screen and (max-width: 600px) {
+   
+    .page-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+          "header "
+          "introduction"
+          "occupation"
+          "footer  ";
+        background-color: var(--white);
+        background-image: url(/img/hexagon.jpg);
+        background-size: cover;
+    }
+    .aside-start, .aside-end {
+       display: none;
+    }
+    .flex-container {
+       flex-direction: column;
+    }
+
+    .introduction {
+        padding: 2rem;
+        padding-block-start: 8rem;
+        max-width: 100%;
+    }
+  }
