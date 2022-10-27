@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tim Sundell, a Future Front End Developer eager to learn more">
-    
+   
     <!--Open Graph-->
     <meta property="og:title" content="Tim Sundell, a Future Front End Developer eager to learn more.">
     <meta property="og:type" content="">
@@ -16,11 +16,11 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
-    
+   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    
+   
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
@@ -52,18 +52,30 @@
         </div>
 
         <div class="introduction">
-            <article class="about-me" id="about-me">
+            <article class="about-me" id="about-me"> <!--ID for anchor link-->
                 <h2>About Me</h2>
                 <p>
                     Front End student at Medieinstitutet in Stockholm in search of LIA/practice.
                     I have a passion for creating software and adapt/learn new things
-                    in an industry that is in constant development.<br><br> I am open to either become and 
-                    expert in some of the areas I will already master by the time we make 
-                    acquaintance, Or learn a new language/framework/version control that you 
-                    use. On my spare time I like to watch ice-hockey, go on walks 
-                    with my dog and hiking. 
+                    in an industry that is in constant development.<br><br> I am open to either become and
+                    expert in some of the areas I will already master by the time we make
+                    acquaintance, Or learn a new language/framework/version control that you
+                    use. On my spare time I like to watch ice-hockey, go on walks
+                    with my dog and hiking.
                 </p>
-            </article>     
+            </article>
+            <article class="Resumé" id="Resume"> <!--ID for anchor link-->
+                <h2>Resume</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </p>
+            </article>      
         </div>
 
         <div class="aside-end"> <!--"the very right column"-->
@@ -138,37 +150,94 @@
 
         <div class="occupation">
             <section class ="flex-container">
+                <h3 class="hidden-content">Medieinstitutet</h3>
                 <article class="work1-main">
                     <ul>
                         <li><h4>
                                 <time datetime="2015-03-01" class="start">Mar 2015</time>
                                 <time datetime="2022-12-31" class="end">Dec 2022</time>
                             </h4>
-                        <li>Scania Industrial maintenance AB</li>
-                        <li class="bold-paragraph">Administrator</li>
+                        <li>Medieinstitutet</li>
+                        <li class="bold-paragraph">Front End Student</li>
                     </ul> 
                     <p>
-                        I worked as an administrator at "Scanias "Ordercentral" with the administrative 
-                        work order flow for facility and production maintainance.<br><br> 
-                        Everything from 
-                        registration until billing. Also as an intermediary for all questions regarding 
-                        ongoing assignments between customers and executing departments. The Ordercentral 
-                        work as a filter and as a support team to ensure quality for the majority
-                        of incoming and outgoing work orders in Södertälje, Luleå and Oskarshamn. <br><br> 
-                        At this position I worked daily in smaller teams with the computer playing 
-                        a central role. Our main program was IBMs Maximo. which is built of an SQL 
-                        database. Sometimes we needed to use SQL queries to make filters in order 
-                        to find what we were looking for. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit
+                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum.
                     </p>
                 </article>
                 <aside class ="work1-aside">
+                    <img src ="img/medieinstitutet.png" alt="Scania logo" width="300" height ="300">
+                </aside>
+            </section>
+
+            <section class ="flex-container">
+                <h3 class="hidden-content">Scania</h3>
+                <article class="work2-main">
+                    <ul>
+                        <li><h4>
+                                <time datetime="2015-03-01" class="start">Mar 2015</time>
+                                <time datetime="2022-12-31" class="end">Dec 2022</time>
+                            </h4>
+                        <li>Scania Industrial Maintenance</li>
+                        <li class="bold-paragraph">Administrator</li>
+                    </ul> 
+                    <p>
+                        I worked as an administrator at "Scanias "Ordercentral" with the administrative
+                        work order flow for facility and production maintainance.<br><br> 
+                       
+                        Everything from registration until billing. Also as an intermediary for all questions regarding
+                        ongoing assignments between customers and executing departments. The Ordercentral
+                        work as a filter and as a support team to ensure quality for the majority
+                        of incoming and outgoing work orders in Södertälje, Luleå and Oskarshamn. <br><br> 
+
+                        At this position I worked daily in smaller teams with the computer playing
+                        a central role. Our main program was IBMs Maximo. which is built of an SQL
+                        database. Sometimes we needed to use SQL queries to make filters in order
+                        to find what we were looking for.
+                    </p>
+                </article>
+                <aside class ="work2-aside">
                     <img src ="img/scania.png" alt="Scania logo" width="300" height ="300">
                 </aside>
             </section>
-        </div>   
+
+            <section class ="flex-container">
+                <h3 class="hidden-content">Lantmännen</h3>
+                <article class="work3-main">
+                    <ul>
+                        <li><h4>
+                                <time datetime="2015-03-01" class="start">Mar 2015</time>
+                                <time datetime="2022-12-31" class="end">Dec 2022</time>
+                            </h4>
+                        <li>Lantmännen Ceralia AB</li>
+                        <li class="bold-paragraph">Process Operator</li>
+                    </ul> 
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit
+                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum.
+                    </p>
+                </article>
+                <aside class ="work3-aside">
+                    <img src ="img/lantmannen.png" alt="Scania logo" width="300" height ="300">
+                </aside>
+            </section>
+        </div>
+         
 
         <div class="footer">
-            <footer class="contact-me">
+            <footer class="contact-me" id="contact-me"> <!--ID for anchor link-->
                 <article>
                 <h2>Contact Me</h2>
                 </article>
@@ -181,15 +250,15 @@
                 </div>
                 <div>
                     <a href="https://www.linkedin.com/in/tim-sundell-87b644252/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-                    
+                   
                 </div>
                 <!-- <a href="https://www.linkedin.com/in/tim-sundell-87b644252/" target="_blank">My linkedin profile</a><br>
                 <a href="tim.sundell@medieinstitutet.se">tim.sundell@medieinstitutet.se</a><br>
                 <a href="tel:+4672-xxxxxxx">(+46) 72-xxxxxxx</a> -->
-    
+   
                 </address>
             </footer>
-        </div>     
+        </div>    
     </div>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
