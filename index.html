@@ -1,32 +1,196 @@
-<!-- skriv din kod i denna fil -->
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en" prefix="og: https://ogp.me/ns#">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tim Sundell - A Future Front End Developer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tim Sundell, a Future Front End Developer eager to learn more">
+    
+    <!--Open Graph-->
+    <meta property="og:title" content="Tim Sundell, a Future Front End Developer eager to learn more.">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
+    <!--Font Awesome script for logos-->
+    <script src="https://kit.fontawesome.com/2eec9d03e4.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
+    <div class="page-container">
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="header">
+            <header class="logo-container">
+                <img class="signature-img" src ="img/signature.png" alt="Tim Sundells signature" width="300" height="100"> <!--Might change to use a different font instead of IMG-->
+                <p class="front-end-text">Front End <span>Developer</span></p>
+                <div class ="portrait-container"></div>
+            </header>
+        </div>
+
+        <div class="aside-start"> <!--"the very left column"-->
+            <aside class ="personal-info">
+                <adress>
+                    <h3>Personal Info</h3>
+                    <p>Age : 30.</p>
+                    <p class="tel-info">Phone Number :<a href="tel:+1234567891">(123) 456-7891</a></p>
+                    <p class ="mail-info">Mail :      <a href="mailto:john@doe.com">john@doe.com</a></p>
+                    <p class ="location-info">Location : Stockholm, Sweden.</p>
+                </adress>
+            </aside>
+        </div>
+
+        <div class="introduction">
+            <article class="about-me" id="about-me">
+                <h2>About Me</h2>
+                <p>
+                    Front End student at Medieinstitutet in Stockholm in search of LIA/practice.
+                    I have a passion for creating software and adapt/learn new things
+                    in an industry that is in constant development.<br><br> I am open to either become and 
+                    expert in some of the areas I will already master by the time we make 
+                    acquaintance, Or learn a new language/framework/version control that you 
+                    use. On my spare time I like to watch ice-hockey, go on walks 
+                    with my dog and hiking. 
+                </p>
+            </article>     
+        </div>
+
+        <div class="aside-end"> <!--"the very right column"-->
+            <article class="syllabus-table">
+                <h3>Syllabus</h3>
+                <table>
+                    <tr>
+                        <th>Course</th>
+                        <th>Weeks</th>
+                    </tr>
+                    <tr>
+                        <td>HTML och CSS 20p</td>
+                        <td>4/v</td>
+                    </tr>
+                    <tr>
+                        <td>Agilt Projektarbete 10p</td>
+                        <td>2/v</td>
+                    </tr>
+                    <tr>
+                        <td>API-utveckling 45p</td>
+                        <td>9/v</td>
+                    </tr>
+                       <tr>
+                        <td>Grafiska verktyg för gränsnittsdesign 15p</td>
+                        <td>3/v</td>
+                    </tr>
+                    <tr>
+                        <td>Javascript - Grundkurs 40p</td>
+                        <td>8/v</td>
+                    </tr>
+                    <tr>
+                        <td>Javascript - Fördjupning 60p</td>
+                        <td>12/v</td>
+                    </tr>
+                    <tr>
+                        <td>Arbetsmetodik för utvecklare 10p</td>
+                        <td>2/v</td>
+                    </tr>
+                    <tr>
+
+                        <td>UX/Usability 15p</td>
+                        <td>3/v</td>
+                    </tr>
+                    <tr>
+                        <td>LIA 150p*</td>
+                        <td>10/v</td>
+                    </tr>
+                    <tr>
+                        <td>Examensarbete 30p</td>
+                        <td>6/v</td>
+                    </tr>
+                    <tr>
+                        <td>LIA 280p*</td>
+                        <td>16/v</td>
+                    </tr>
+                    <tr>
+
+                        <td>Kompetensportfölj och entreprenörskap 10p</td>
+                        <td>1/v</td>
+                    </tr>
+                    <tr>
+                        <td>Testning 15p</td>
+                        <td>3/v</td>
+                    </tr>
+                    <tr>
+                        <td>This is where I would like to meet you!</td>
+                        <td><i class="fa-regular fa-handshake"></i></td>
+                    </tr>
+                </table>  
+            </article>
+        </div>
+
+        <div class="occupation">
+            <section class ="flex-container">
+                <article class="work1-main">
+                    <ul>
+                        <li><h4>
+                                <time datetime="2015-03-01" class="start">Mar 2015</time>
+                                <time datetime="2022-12-31" class="end">Dec 2022</time>
+                            </h4>
+                        <li>Scania Industrial maintenance AB</li>
+                        <li class="bold-paragraph">Administrator</li>
+                    </ul> 
+                    <p>
+                        I worked as an administrator at "Scanias "Ordercentral" with the administrative 
+                        work order flow for facility and production maintainance.<br><br> 
+                        Everything from 
+                        registration until billing. Also as an intermediary for all questions regarding 
+                        ongoing assignments between customers and executing departments. The Ordercentral 
+                        work as a filter and as a support team to ensure quality for the majority
+                        of incoming and outgoing work orders in Södertälje, Luleå and Oskarshamn. <br><br> 
+                        At this position I worked daily in smaller teams with the computer playing 
+                        a central role. Our main program was IBMs Maximo. which is built of an SQL 
+                        database. Sometimes we needed to use SQL queries to make filters in order 
+                        to find what we were looking for. 
+                    </p>
+                </article>
+                <aside class ="work1-aside">
+                    <img src ="img/scania.png" alt="Scania logo" width="300" height ="300">
+                </aside>
+            </section>
+        </div>   
+
+        <div class="footer">
+            <footer class="contact-me">
+                <article>
+                <h2>Contact Me</h2>
+                </article>
+                <address class="social-media">
+                <div>
+                    <a href="https://www.linkedin.com/in/tim-sundell-87b644252/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tim-sundell-87b644252/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tim-sundell-87b644252/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    
+                </div>
+                <!-- <a href="https://www.linkedin.com/in/tim-sundell-87b644252/" target="_blank">My linkedin profile</a><br>
+                <a href="tim.sundell@medieinstitutet.se">tim.sundell@medieinstitutet.se</a><br>
+                <a href="tel:+4672-xxxxxxx">(+46) 72-xxxxxxx</a> -->
+    
+                </address>
+            </footer>
+        </div>     
+    </div>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
