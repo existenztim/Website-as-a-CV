@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Tim Sundell HTML with CSS. This will be the base CSS file once sass has
+   been applied. 
+   ========================================================================== */
+
+:root {
+    --blue:  #041e42;
+    --blue:  #3d74a8;
+    --white: #f7f7f7;
+    --gray:  #3d3f42;
+    --lightgray: #dfdede88;
+    --black: #181616;
+    }
+    
+html {
+    box-sizing: border-box; /*ta bort?*/
+    }
+    *,
+    *::before,
+    *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+    
+body {
+    background-color: var(--white);
+    line-height: 1.6rem;
+    font-weight: 400;
+    font-family:"Lato", sans-serif, "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+}
+
+.page-container {
+    display: grid; 
+    grid-template-columns: 0.8fr 1fr 1fr 0.8fr; 
+    grid-template-rows: 0.5fr 0.5fr 1fr 0.3fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "header header header header"
+      "aside-start introduction introduction aside-end"
+      "aside-start occupation occupation aside-end"
+      "footer footer footer footer"; 
+    background-color: var(--white);
+    background-image: url(/img/hexagon.jpg);
+    background-size: cover;
+}
+
+
+.aside-start { 
+    grid-area: aside-start; 
+    background-color: var(--gray);
+}
+
+.occupation { 
+    grid-area: occupation; 
+}
+
+.occupation img { 
+    width: 200px;
+    height: 100px;
+}
+.footer { 
+    grid-area: footer; 
+    background-color: #f7f7f7;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.header { 
+    grid-area: header; 
+}
+
+.logo-container {
+    width: 100%;
+    min-height: calc(10vh + 200px);
+    text-align: center;
+    position: relative;
+    top: 0;
+    background: rgb(61,63,66);
+    background: radial-gradient(circle, rgba(61,63,66,1) 0%, rgba(24,22,22,1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.portrait-container { 
+	height: calc(150px + 6vw);
+	width: calc(150px + 6vw);
+	border: calc(2px + 0.2vw) solid transparent;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	background-size: cover;
+	box-sizing: border-box;
+    position: absolute;
+    max-width: 300px;
+    max-height: 300px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 10rem;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 40%;
+	background-image: url(/img/portraitme.jpg), linear-gradient(#cad6ce, #120a2e); /*might redo and import as IMG in html*/
+}
+
+.signature-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2rem;
+    margin: 0 auto;
+}
+
+.front-end-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8rem;
+    color: #f7f7f7;
+}
+
+.front-end-text span{
+color: var(--blue);
+}
+.front-end-text::before{
+    content: "<";
+}
+.front-end-text::after{
+    content: "/>";
+}
+
+/* ==========================================================================
+   Introduction
+   ========================================================================== */
+.introduction { 
+    grid-area: introduction; 
+    padding: 2rem;
+    padding-block-start: 8rem;
+    max-width: 700px;
+}
+/* ==========================================================================
+   Aside inline start (left column)
+   ========================================================================== */
+
+.personal-info {
+    border: 2px solid var(--blue);
+    color:var(--white);
+    padding: 2rem;
+}
+
+.tel-info::before{
+    content: '\f095'; /*Content code for phone*/
+    font: var(--fa-font-solid);
+    margin-inline-end: 1rem;
+}
+.mail-info::before{
+    content: '\f003'; /*Content code for letter*/
+    font: var(--fa-font-solid);
+    margin-inline-end: 1rem;
+}
+
+.location-info::before{
+    content: '\f015'; /*Content code for house*/
+    font: var(--fa-font-solid);
+    margin-inline-end: 1rem;
+}
+
+
+/* ==========================================================================
+   Occupation (might rename to experience)
+   ========================================================================== */
+.flex-container {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.bold-paragraph {
+    font-weight: bold;
+}
+
+.bold-paragraph::before {
+    content: '\f075'; /*Content code for phone*/
+    font: var(--fa-font-solid);
+}
+/* ==========================================================================
+   Aside inline end (right column)
+   ========================================================================== */
+.aside-end { 
+    grid-area: aside-end; 
+    background-color: var(--lightgray);
+}
+
+.aside-end h3, .aside-end th {
+    text-align: start;
+}
+
+tr:nth-child(odd) {
+    background-color: #636363;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.contact-me {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+    border-top: 1px solid var(--black);
+}
+
+.social-media {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 2rem;
+   font-size: 2rem;
+}
+
+a:link, a:visited, a:active {
+    color: var(--blue);
+}
