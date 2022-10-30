@@ -5,85 +5,86 @@
     <title>Tim Sundell - A Future Front End Developer</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tim Sundell, a Future Front End Developer eager to learn more">
-   
+    <meta name="description" content="Webpage emulated as a CV, By Tim Sundell">
+
     <!--Open Graph-->
     <meta property="og:title" content="Tim Sundell, a Future Front End Developer eager to learn more.">
-    <meta property="og:type" content="">
+    <meta property="og:type" content="webpage">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
 
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
-   
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-   
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=EB+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <!--Font Awesome script for logos-->
     <script src="https://kit.fontawesome.com/2eec9d03e4.js" crossorigin="anonymous"></script>
-    <script src="js/menu.js" defer></script> <!--Defer will not execute script before page fully renders-->
+    <script src="js/menu.js" defer></script>
+    <!--Defer will not execute script before page fully renders-->
 </head>
+
 <body>
     <div class="page-container">
-        <a class="skip-to-content-link" href="#">Skip to content</a> <!--will implement a skip to content button later on-->
-       
         <div class="header">
             <header class="logo-container">
+                <a class="skip-to-content-link" href="#skip-content">Skip to content</a><!--jumps over menu in tabindex-->
                 <h1 class="name-header">Tim Sundell</h1>
                 <p class="front-end-text">Front End <span>Developer</span></p>
-                <div class ="portrait-container">
-                    <img src="/img/portraitme.jpg" alt ="A portrail of Tim Sundell" width ="200" height="200">
+                <div class="portrait-container">
+                    <img src="/img/portraitme.jpg" alt="A portrait of Tim Sundell" width="200" height="200"
+                        loading="lazy">
                 </div>
                 <!--Menu-->
                 <nav id="myMenu" class="main-menu">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
-                    <a href="#about-me" onclick="closeMenu()"> About me</a> <!--Closes menu when clicked-->
+                    <a href="#about-me" onclick="closeMenu()"> About me</a><!--Closes menu when clicked-->
                     <a href="#resume" onclick="closeMenu()">Resumé</a>
                     <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
                     <a href="#contact-me" onclick="closeMenu()">Contact me</a>
-                </nav>    
+                </nav>
 
-                <button id="openbtn" aria-label="Open menu for internal links" onclick="openMenu()">&#9776;</button>
+                <button id="openbtn" aria-label="Open menu for internal links" onclick="openMenu()">&#9776;</button><!--&#9776; = unicode "trigram for heaven"-->
             </header>
         </div>
         <!--left column-->
-        <div class="aside-start"> <!--"the very left column"-->
+        <div class="aside-start">
 
-            <section class ="personal-info">
-                <adress>
-                    <h3>Personal Info</h3>
-                    <p>Age : 30.</p>
+            <section class="personal-info" id="skip-content">
+                <h3>Personal Info</h3>
+                <p>Age : 30.</p>
+                <address class="contact-info">
+                    <!--Adress not allowed inside section/div/aside-->
                     <p class="tel-info">Phone Number :<a href="tel:+1234567891">(123) 456-7891</a></p>
-                    <p class ="mail-info">Mail :      <a href="mailto:john@doe.com">john@doe.com</a></p>
-                    <p class ="location-info">Location : Stockholm, Sweden.</p>
-                </adress>
+                    <p class="mail-info">Mail : <a href="mailto:john@doe.com">john@doe.com</a></p>
+                    <p class="location-info">Location : Stockholm, Sweden.</p>
+                </address>
             </section>
-
-            <aside class ="skills-inprogress">
+            <aside class="skills-inprogress">
                 <h3>Skills inprogress</h3>
                 <ul>
-                   <li>HTML</li>
-                   <li>CSS</li>
-                   <li>SCSS</li>
-                   <li>React</li>
-                   <li>Github</li>
-                   <li>Javascript</li>
-                   <li>jquery</li>
-                   <li>Node.js</li>
-                   <li>Vue</li>
-               </ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>SCSS</li>
+                    <li>React</li>
+                    <li>Github</li>
+                    <li>Javascript</li>
+                    <li>jQuery</li>
+                    <li>Node.js</li>
+                    <li>Vue</li>
+                </ul>
             </aside>
 
-            <aside class ="education">
+            <aside class="education">
                 <h3>Education</h3>
 
-                <details>          
+                <details>
                     <summary>Lund University
                         <time datetime="2014-08-31" class="start">Aug 2014</time>
                         <time datetime="2015-01-28" class="end">Jan 2015</time>
@@ -91,7 +92,7 @@
                     Research Area: Human Geography 30HP.
                 </details>
 
-                <details>          
+                <details>
                     <summary>Teknikgymnasiet Södertälje
                         <time datetime="2008-09-24" class="start">Aug 2008</time>
                         <time datetime="2011-06-12" class="end">Jun 2011</time>
@@ -100,21 +101,22 @@
                 </details>
 
             </aside>
-           
-            <aside class ="languages">
+
+            <aside class="languages">
                 <h3>Languages</h3>
                 <ul>
-                   <li>Swedish: Native Speaker</li>
-                   <li>English: Fluently</li>
-                   <li>French: Basic</li>
-                   <li>Estonian: Basic</li>
-               </ul>
+                    <li>Swedish: Native Speaker</li>
+                    <li>English: Fluently</li>
+                    <li>French: Basic</li>
+                    <li>Estonian: Basic</li>
+                </ul>
             </aside>
 
         </div>
         <!--center column, row 1-->
         <div class="introduction">
-            <article class="about-me" id="about-me"> <!--ID for anchor link-->
+            <article class="about-me" id="about-me">
+                <!--ID for anchor link-->
                 <h2>About Me</h2>
                 <p>
                     Front End student at Medieinstitutet in Stockholm in search of LIA/practice.
@@ -126,21 +128,28 @@
                     with my dog and hiking.
                 </p>
             </article>
-            <article class="Resumé" id="resume"> <!--ID for anchor link-->
-                <h2>Resume</h2>
+            <article class="Resumé" id="resume">
+                <!--ID for anchor link-->
+                <h2>Resumé</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                    mollit anim id est laborum.
+                    This page will hopefully give you a grasp of my experience.
+                    <p class="resume-mobile">Below you fill first find a syllabus
+                        on the current program im reading containing the 2 occasions
+                        I got my <abbr title="Lärande i arbete">LIA</abbr> period. Further 
+                        down you can see my 3 last major occupations. 
+                    </p>
+                    <p class="resume-desktop">To the right you can see a syllabus on
+                        the current program im reading containing the 2 occasions 
+                        got my  <abbr title="Lärande i arbete">LIA</abbr> period. 
+                        To the left you can see, among other things, some of the skills 
+                        I will posses be the end of this 2 years. Below you can see my 3 
+                        last major occupations. 
+                    </p>
                 </p>
-            </article>      
+            </article>
         </div>
         <!--right column-->
-        <div class="aside-end"> <!--"the very right column"-->
+        <div class="aside-end">
             <article class="syllabus-table">
                 <h3>Syllabus</h3>
                 <table>
@@ -160,7 +169,7 @@
                         <td>API-utveckling 45p</td>
                         <td>9/v</td>
                     </tr>
-                       <tr>
+                    <tr>
                         <td>Grafiska verktyg för gränsnittsdesign 15p</td>
                         <td>3/v</td>
                     </tr>
@@ -203,61 +212,59 @@
                         <td>3/v</td>
                     </tr>
                     <tr>
-                        <td>This is where I would like to meet you  --></td>
+                        <td>This is where I would like to meet you --></td>
                         <td><i class="fa-regular fa-handshake"></i></td>
-                       
+
                     </tr>
-                </table>  
+                </table>
             </article>
         </div>
-         <!--center column row 2-->
+        <!--center column row 2-->
         <div class="occupation">
-            <section class ="flex-container">
+            <section class="flex-container">
                 <h3 class="hidden-content">Medieinstitutet</h3>
                 <article class="work1-main">
                     <ul>
-                        <li><h4>
+                        <li>
+                            <h4>
                                 <time datetime="2015-03-01" class="start">Mar 2015</time>
                                 <time datetime="2022-12-31" class="end">Dec 2022</time>
                             </h4>
                         <li>Medieinstitutet</li>
                         <li class="bold-paragraph">Front End Student</li>
-                    </ul> 
+                    </ul>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.
+                        will study a 2 year program for a totalt of 200YH points. Some of the skills I will master you 
+                        can see at the "skills in progress" bar to the left. 
+                        To the right you can se the syllabus of the full program and how many weeks each course is.
                     </p>
                 </article>
-                <aside class ="work1-aside">
-                    <img src ="img/scania.png" alt="Scania logo" width="300" height ="300">
+                <aside class="work1-aside">
+                    <img src="img/medieinstitutet.png" alt="Medieinstitutet logo" width="300" height="300"
+                        loading="lazy">
                 </aside>
             </section>
 
-            <section class ="flex-container">
+            <section class="flex-container">
                 <h3 class="hidden-content">Scania</h3>
                 <article class="work2-main">
                     <ul>
-                        <li><h4>
+                        <li>
+                            <h4>
                                 <time datetime="2015-03-01" class="start">Mar 2015</time>
                                 <time datetime="2022-12-31" class="end">Dec 2022</time>
                             </h4>
                         <li>Scania Industrial Maintenance</li>
                         <li class="bold-paragraph">Administrator</li>
-                    </ul> 
+                    </ul>
                     <p>
                         I worked as an administrator at "Scanias "Ordercentral" with the administrative
-                        work order flow for facility and production maintainance.<br><br> 
-                       
+                        work order flow for facility and production maintainance.<br><br>
+
                         Everything from registration until billing. Also as an intermediary for all questions regarding
                         ongoing assignments between customers and executing departments. The Ordercentral
                         work as a filter and as a support team to ensure quality for the majority
-                        of incoming and outgoing work orders in Södertälje, Luleå and Oskarshamn. <br><br> 
+                        of incoming and outgoing work orders in Södertälje, Luleå and Oskarshamn. <br><br>
 
                         At this position I worked daily in smaller teams with the computer playing
                         a central role. Our main program was IBMs Maximo. which is built of an SQL
@@ -265,87 +272,92 @@
                         to find what we were looking for.
                     </p>
                 </article>
-                <aside class ="work2-aside">
-                    <img src ="img/scania.png" alt="Scania logo" width="300" height ="300">
+                <aside class="work2-aside">
+                    <img src="img/scania.png" alt="Scania logo" width="300" height="300" loading="lazy">
                 </aside>
             </section>
 
-            <section class ="flex-container">
+            <section class="flex-container">
                 <h3 class="hidden-content">Lantmännen</h3>
                 <article class="work3-main">
                     <ul>
-                        <li><h4>
+                        <li>
+                            <h4>
                                 <time datetime="2015-03-01" class="start">Mar 2015</time>
                                 <time datetime="2022-12-31" class="end">Dec 2022</time>
                             </h4>
                         <li>Lantmännen Ceralia AB</li>
                         <li class="bold-paragraph">Process Operator</li>
-                    </ul> 
+                    </ul>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.
+                        As a process operator I had a crucial role in the production flow at the Lantmännen Factory in Järna. 
+                        I was the link between the team that produced the products and the team that was in control of the packaging.<br><br>
+
+                        I did this by making sure there was always a constant flow of materials on every line and so every compartment 
+                        could do there tasks simultaneously even though they where at differents steps in the whole productions process. 
+                        This is something I hope I can apply in the world of web development aswell, where it's crucial to work agile to finish 
+                        things before dealine. 
+
                     </p>
                 </article>
-                <aside class ="work3-aside">
-                    <img src ="img/lantmannen.png" alt="Scania logo" width="300" height ="300">
+                <aside class="work3-aside">
+                    <img src="img/lantmannen.png" alt="Lantmännen logo" width="300" height="300" loading="lazy">
                 </aside>
             </section>
             <!--Portfolio-->
-            <section class ="flex-container">
+            <section class="flex-container">
                 <h3 class="hidden-content">Portfolio</h3>
-                <article class="portfolio" id="portfolio"> 
-                    <ul>
-                        <li>Portfolio</li>
-                        <li class="bold-paragraph">Testing</li>
-                    </ul> 
+                <article class="portfolio" id="portfolio">
+                    <h2>Portfolio</h2>
                     <p>
-                        Check this out -> <!--Come back later-->
+                        As for now I refer to my github page.
+                        Make sure to come back in the future to see the "stand-alone" verison of my portfolio. 
+                    </p>
+                    <p>
+                      <a href="https://github.com/existenztim" target="_blank"> <i class="fa-brands fa-github" rel="noopener noreferrer"></i> My Github <i class="fa-brands fa-github"></i></a>
                     </p>
                 </article>
             </section>
 
         </div>
-         <!--footer-->
+        <!--footer-->
         <div class="footer">
-            <footer class="contact-me" id="contact-me"> <!--ID for anchor link-->
+            <footer class="contact-me" id="contact-me">
+                <!--ID for anchor link-->
                 <article>
-                <h2>Contact Me</h2>
+                    <h2>Contact Me</h2>
                 </article>
                 <address class="social-media">
-                <div>
-                    <a href="https://www.linkedin.com/in/tim-sundell-87b644252/" aria-label="Go to my LinkedIn page" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <div>
-                    <a href="https://www.linkedin.com/in/tim-sundell-87b644252/" aria-label="Go to my instagram page" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                </div>
-                <div>
-                    <a href="https://www.linkedin.com/in/tim-sundell-87b644252/"  aria-label="Go to my facebook page" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-                   
-                </div>
-                <!-- <a href="https://www.linkedin.com/in/tim-sundell-87b644252/" target="_blank">My linkedin profile</a><br>
-                <a href="tim.sundell@medieinstitutet.se">tim.sundell@medieinstitutet.se</a><br>
-                <a href="tel:+4672-xxxxxxx">(+46) 72-xxxxxxx</a> -->
-   
+                    <div>
+                        <a href="https://www.linkedin.com/in/tim-sundell-87b644252/" aria-label="Go to my LinkedIn page"
+                            target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/existenztim/"aria-label="Go to my instagram page" 
+                        target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/tim.sundell.3/" aria-label="Go to my facebook page"
+                            target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
+                    </div>
+                    <!-- <a href="https://www.linkedin.com/in/tim-sundell-87b644252/" target="_blank">My linkedin profile</a><br>
+                         <a href="tim.sundell@medieinstitutet.se">tim.sundell@medieinstitutet.se</a><br>
+                         <a href="tel:+4672-xxxxxxx">(+46) 72-xxxxxxx</a> -->
                 </address>
             </footer>
-        </div>    
+        </div>
     </div>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>
