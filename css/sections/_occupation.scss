@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Occupation (might rename to experience)
+========================================================================== */
+.occupation {
+    grid-area: occupation;
+}
+
+.occupation img {
+    width: 200px;
+    height: 100px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.bold-paragraph {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.bold-paragraph::before {
+    content: "\f054"; /*Content code for phone*/
+    font: var(--fa-font-solid);
+}
+
+.portfolio {
+    text-align: center;
+}
+
+.portfolio h2{
+    text-align: left;
+}

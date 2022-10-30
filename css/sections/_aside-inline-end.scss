@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Aside inline end (right column)
+   ========================================================================== */
+.aside-end {
+    grid-area: aside-end;
+
+}
+
+.aside-end h3, .aside-end th {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #918f8f;
+}
+
+table {
+    border: 5px solid;
+    padding: 0.5rem;
+    min-width: 300px;
+    border-radius: 2rem;
+    background-color: var(--white);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.fa-handshake {
+    margin-left: 0.5rem;
+}

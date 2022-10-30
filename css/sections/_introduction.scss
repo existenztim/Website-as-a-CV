@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Introduction
+========================================================================== */
+.introduction {
+    grid-area: introduction;
+    padding: 2rem;
+    padding-block-start: 8rem;
+    max-width: calc(100% - 100px);
+    min-width: 500px;
+}
+
+.resume-mobile {
+    display: none;
+}
+

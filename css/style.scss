@@ -1,0 +1,166 @@
+/* ==========================================================================
+   Tim Sundell HTML with CSS. 
+========================================================================== */
+@import "vendors/normalize"; /*might change @import to @forward later on*/
+@import "vendors/boilerplate-main";
+
+@import "sections/header"; 
+@import "sections/aside-inline-start";
+@import "sections/introduction";
+@import "sections/occupation";
+@import "sections/aside-inline-end";
+@import "sections/footer";
+
+:root {
+    --blue: #3d74a8; /*Come back later to convert var to sass var*/
+    --white: #f7f7f7;
+    --gray: #3d3f42;
+    --lightgray: #dfdede88;
+    --black: #181616;
+}
+
+$blue:#3d74a8;
+$white:#f7f7f7;
+$gray:#3d3f42;
+$lightgray:#dfdede88;
+$black: #181616;
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    /* scroll-margin-top: calc(10vh + 200px); So anchor links align correct while menu is open */
+}
+
+body {
+    background-color: var(--white);
+    line-height: 1.6rem;
+    font-weight: 500;
+    font-family: "EB Garamond", sans-serif, "Helvetica Neue", sans-serif;
+    font-size: 1.1rem;
+
+}
+
+.page-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr 0.8fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header header"
+        "aside-start introduction introduction aside-end"
+        "aside-start occupation occupation aside-end"
+        "footer footer footer footer";
+    background-color: var(--white);
+    background-image: url(/img/hexagon.jpg);
+    background-size: cover;
+
+}
+
+article {
+    padding: 1rem;
+}
+
+article p {
+    padding: 1rem;
+}
+
+article ul {
+    list-style: none;
+}
+
+h2::first-letter {
+    color: var(--blue);
+    font-size: 2rem;
+}
+
+.hidden-content {
+    display: none;/*Not to be shown, only to make outliner look good*/
+}
+
+.skip-to-content-link {
+    background: var(--white);
+    height: 2rem;
+    padding: 8px;
+    position: absolute;
+    transform: translateY(-200%);
+    transition: transform 0.3s;
+    z-index: 0;
+}
+  
+  .skip-to-content-link:focus {
+    transform: translateY(0%);
+    z-index: 10;
+}        
+
+/* ==========================================================================
+   media queries
+========================================================================== */
+
+@media only screen and (max-width: 768px) {
+
+    .page-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+        "header"
+        "aside-start" 
+        "introduction"
+        "aside-end"
+        "occupation "
+        "footer";
+    }
+
+    .aside-start {
+        display: none;
+    }
+
+    .aside-end{
+        text-align: center;
+        margin: auto;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }   
+
+    .introduction {
+        padding: 2rem;
+        padding-block-start: 8rem;
+        max-width: 95%;
+        min-width: 300px;
+    }
+
+    .resume-mobile {
+        display: block;
+    }
+
+    .resume-desktop {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .page-container {
+        display: grid;
+        gap: 0px 0px;
+        grid-template-areas:
+            "header header"
+            "aside-start introduction"
+            "aside-start occupation"
+            "footer footer footer";
+    
+    }
+    
+    .flex-container {
+        flex-direction: column;
+    }
+}

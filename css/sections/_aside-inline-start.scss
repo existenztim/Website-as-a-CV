@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Aside inline start (left column)
+========================================================================== */
+.aside-start {
+    grid-area: aside-start;
+    background-color: var(--lightgray);
+    color: var(--black);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    padding: 1rem;
+    position: relative;
+}
+
+.personal-info, .skills-inprogress, .education, .languages {
+    padding: 2rem;
+    border-block-end: 2px solid ;
+    border-image: linear-gradient(45deg, var(--blue), var(--lightgray)) 1;
+}
+
+.skills-inprogress, .languages {
+    text-align: center;
+}
+
+.skills-inprogress ul, .languages ul {
+    list-style-type: none;
+}
+
+.tel-info::before {
+    content: '\f095'; /*Content code for phone*/
+    font: var(--fa-font-solid);
+    margin-inline-end: 1rem;
+}
+
+.mail-info::before {
+    content: '\f003'; /*Content code for letter*/
+    font: var(--fa-font-solid);
+    margin-inline-end: 1rem;
+}
+
+.location-info::before {
+    content: '\f015'; /*Content code for house*/
+    font: var(--fa-font-solid);
+    margin-inline-end: 1rem;
+}
+
+.aside-start h3 {
+    text-align: center;
+    position: relative;
+    bottom: 33px;          
+      
+}
+
