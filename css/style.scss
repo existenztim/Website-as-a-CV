@@ -34,8 +34,8 @@ html {
 body {
     background-color: $white;
     line-height: 1.6rem;
-    font-weight: 500;
-    font-family: "EB Garamond", sans-serif, "Helvetica Neue", sans-serif;
+    font-family: "EB Garamond", serif, "Times New Roman", sans-serif;
+    
     font-size: 1.1rem;
 }
 
@@ -49,10 +49,9 @@ body {
         "aside-start occupation occupation aside-end"
         "footer footer footer footer";
     background-color: $white;
-    background-image: url(/img/hexagon.jpg);
+    background-image: url("../img/hexagon.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment:fixed
+    background-repeat: repeat;
 
 }
 
@@ -127,7 +126,6 @@ h2::first-letter {
 
     .introduction {
         padding: 2rem;
-        padding-block-start: 8rem;
         max-width: 95%;
         min-width: 300px;
     }
@@ -141,19 +139,25 @@ h2::first-letter {
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 768px) and (max-width: 1123px)  {
 
     .page-container {
         display: grid;
+        grid-template-columns: 0.4fr 1fr;
         gap: 0px 0px;
         grid-template-areas:
-            "header header"
+            "header header "
             "aside-start introduction"
+            "aside-start aside-end"
             "aside-start occupation"
-            "footer footer footer";
-    
+            "footer footer ";
     }
     
+    .aside-end{
+        text-align: center;
+        margin: auto;
+    }
+
     .flex-container {
         flex-direction: column;
     }
@@ -168,14 +172,28 @@ h2::first-letter {
  }
 }
 
-/*No real effect in this project unless you disable CSS, uncomment to use*/
-// @media (prefers-color-scheme: dark) { 
-//   html {
-//     background: rgb(0, 0, 0);
-//     color: white;
-//   }
+/*uncomment to use*/
+//  @media (prefers-color-scheme: dark) { 
+//     html {
+//         color: white;
+//    }
 
-//   .to-the-moon-box {
-//     color: #999;
+//     .page-container {
+//         background-image: none;
+//         background: rgb(0, 0, 0);
 //   }
+//     tr:nth-child(even) {
+//         background-color: $gray;
+// }
+
+//     table {
+//         border: 5px solid;
+//         padding: 0.5rem;
+//         min-width: 300px;
+//         border-radius: 2rem;
+//         background-color: $black;
+//         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+//             rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+//             rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+//     }
 // }
