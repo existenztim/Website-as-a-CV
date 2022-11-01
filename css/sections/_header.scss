@@ -111,15 +111,7 @@ button:hover {
     top: 10rem;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: 40%;
-    background-image: url(/img/portrait.png), linear-gradient(#cad6ce, #120a2e); /*might remove since img is already in HTML*/
-}
-
-.signature-img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 2rem;
-    margin: 0 auto;
+    background-image: url("/img/portrait.png"), linear-gradient(#cad6ce, #120a2e); /*might remove since img is already in HTML*/
 }
 
 .front-end-text {

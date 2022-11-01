@@ -30,7 +30,7 @@
 }
 
 .tel-info::before {
-    content: '\f095'; /*Content code for phone*/
+    content: '\f095'; /*Content code for >*/
     font: var(--fa-font-solid);
     margin-inline-end: 1rem;
 }
@@ -53,5 +53,6 @@
     bottom: 33px;          
       
 }
+
 
 
