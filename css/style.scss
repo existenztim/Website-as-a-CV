@@ -1,6 +1,12 @@
 /* ==========================================================================
    Tim Sundell HTML with CSS. 
 ========================================================================== */
+$blue:#3d74a8;
+$white:#f7f7f7;
+$gray:#3d3f42;
+$lightgray:#dfdede88;
+$black: #181616;
+
 @import "vendors/normalize"; /*might change @import to @forward later on*/
 @import "vendors/boilerplate-main";
 
@@ -10,20 +16,6 @@
 @import "sections/occupation";
 @import "sections/aside-inline-end";
 @import "sections/footer";
-
-:root {
-    --blue: #3d74a8; /*Come back later to convert var to sass var*/
-    --white: #f7f7f7;
-    --gray: #3d3f42;
-    --lightgray: #dfdede88;
-    --black: #181616;
-}
-
-$blue:#3d74a8;
-$white:#f7f7f7;
-$gray:#3d3f42;
-$lightgray:#dfdede88;
-$black: #181616;
 
 html {
     box-sizing: border-box;
@@ -36,16 +28,15 @@ html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    /* scroll-margin-top: calc(10vh + 200px); So anchor links align correct while menu is open */
+    /* Migth remove --> scroll-margin-top: calc(10vh + 200px); So anchor links align correct while menu is open */
 }
 
 body {
-    background-color: var(--white);
+    background-color: $white;
     line-height: 1.6rem;
     font-weight: 500;
     font-family: "EB Garamond", sans-serif, "Helvetica Neue", sans-serif;
     font-size: 1.1rem;
-
 }
 
 .page-container {
@@ -57,50 +48,53 @@ body {
         "aside-start introduction introduction aside-end"
         "aside-start occupation occupation aside-end"
         "footer footer footer footer";
-    background-color: var(--white);
+    background-color: $white;
     background-image: url(/img/hexagon.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed
 
 }
 
 article {
     padding: 1rem;
-}
 
-article p {
-    padding: 1rem;
-}
+    p {
+        padding: 1rem;
+    }
 
-article ul {
-    list-style: none;
+    ul {
+        list-style: none;
+    }   
 }
 
 h2::first-letter {
-    color: var(--blue);
+    color: $blue;
     font-size: 2rem;
 }
 
 .hidden-content {
-    display: none;/*Not to be shown, only to make outliner look good*/
+    visibility: hidden;/*Not to be shown, only to make outliner look good*/
+    font-size: 0; /*We want the semantic value but without taking space*/
 }
 
 .skip-to-content-link {
-    background: var(--white);
+    background: $white;
     height: 2rem;
     padding: 8px;
     position: absolute;
     transform: translateY(-200%);
     transition: transform 0.3s;
     z-index: 0;
-}
-  
-  .skip-to-content-link:focus {
-    transform: translateY(0%);
-    z-index: 10;
+
+    &:focus {
+        transform: translateY(0%);
+        z-index: 10;
+    }
 }        
 
 /* ==========================================================================
-   media queries
+   media queries - Come back later
 ========================================================================== */
 
 @media only screen and (max-width: 768px) {
@@ -164,3 +158,24 @@ h2::first-letter {
         flex-direction: column;
     }
 }
+
+/*Accessibility*/
+@media (prefers-reduced-motion: reduce) {
+ * {
+   animation: none;
+   transition: none;
+   transform: none;
+ }
+}
+
+/*No real effect in this project unless you disable CSS, uncomment to use*/
+// @media (prefers-color-scheme: dark) { 
+//   html {
+//     background: rgb(0, 0, 0);
+//     color: white;
+//   }
+
+//   .to-the-moon-box {
+//     color: #999;
+//   }
+// }
