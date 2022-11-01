@@ -3,17 +3,22 @@
 ========================================================================== */
 .aside-start {
     grid-area: aside-start;
-    background-color: var(--lightgray);
-    color: var(--black);
+    background-color: $lightgray;
+    color: $black;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     padding: 1rem;
     position: relative;
 }
 
+.aside-start hr {
+    visibility: hidden; /*We keep it for semantic purpuse but hide it visually*/
+    height: 0;
+}
+
 .personal-info, .skills-inprogress, .education, .languages {
     padding: 2rem;
     border-block-end: 2px solid ;
-    border-image: linear-gradient(45deg, var(--blue), var(--lightgray)) 1;
+    border-image: linear-gradient(45deg, $blue, $lightgray  ) 1;
 }
 
 .skills-inprogress, .languages {
@@ -48,4 +53,5 @@
     bottom: 33px;          
       
 }
+
 

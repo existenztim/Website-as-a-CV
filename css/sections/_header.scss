@@ -16,8 +16,7 @@
     top: 0;
     right: 0;
     overflow-x: hidden;
-    transition: 0.3s;
-    /*Time it takes menu to open/close*/
+    transition: 0.3s; /*Time it takes menu to open/close*/
     padding-top: 60px;
 }
 
@@ -25,13 +24,13 @@
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     text-decoration: none;
     font-size: 1.7rem;
-    color: var(--white);
+    color: $white;
     display: block;
     transition: 0.3s;
 }
 
 .main-menu a:hover {
-    color: var(--white);
+    color: $white;
 }
 
 .main-menu .closebtn {
@@ -50,14 +49,14 @@ button {
     right: 25px;
     font-size: 3rem;
     margin-left: 50px;
-    background-color: var(--lightgray);
+    background-color: $lightgray;
     box-shadow: rgb(10, 10, 10) 3px 3px 6px 0px inset,
         rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 
 }
 
 button:hover {
-    background-color: var(--white);
+    background-color: $white;
     box-shadow: rgb(10, 10, 10) 3px 3px 6px 0px inset,
         rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 
@@ -65,8 +64,8 @@ button:hover {
 
 .name-header {
     font-family: "Dancing Script", cursive;
-    color: var(--white);
-    font-size: clamp(3rem, 10vw, 6rem);
+    color: $white;
+    font-size: clamp(3rem, 10vw, 6rem); /*Responsive font-size*/
     position: absolute;
     left: 0;
     right: 0;
@@ -132,7 +131,7 @@ button:hover {
 }
 
 .front-end-text span {
-    color: var(--blue);
+    color: $blue;
 }
 
 .front-end-text::before {

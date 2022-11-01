@@ -24,6 +24,8 @@
 .bold-paragraph::before {
     content: "\f054"; /*Content code for phone*/
     font: var(--fa-font-solid);
+    color: $blue;
+    padding-inline-end: 1rem;
 }
 
 .portfolio {
