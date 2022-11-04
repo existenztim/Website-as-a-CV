@@ -3,11 +3,11 @@
 ========================================================================== */
 .occupation {
     grid-area: occupation;
-}
 
-.occupation img {
-    width: 200px;
-    height: 100px;
+    img {
+        max-width: 200px;
+        max-height: 200px;
+    }
 }
 
 .flex-container {
@@ -30,8 +30,8 @@
 
 .portfolio {
     text-align: center;
-}
 
-.portfolio h2{
-    text-align: left;
+    h2 {
+        text-align: left;
+    }
 }
