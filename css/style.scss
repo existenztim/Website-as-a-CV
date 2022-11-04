@@ -1,15 +1,16 @@
 /* ==========================================================================
-   Tim Sundell HTML with CSS. 
+   Tim Sundell CV with CSS. An attempt to emulate the look of a CV as a
+   webpage. 
 ========================================================================== */
 $blue:#3d74a8;
 $white:#f7f7f7;
 $gray:#3d3f42;
 $lightgray:#dfdede88;
 $black: #181616;
-
-@import "vendors/normalize"; /*might change @import to @forward later on*/
+/*boilerplates*/
+@import "vendors/normalize"; 
 @import "vendors/boilerplate-main";
-
+/*original*/
 @import "sections/header"; 
 @import "sections/aside-inline-start";
 @import "sections/introduction";
@@ -96,6 +97,7 @@ h2::first-letter {
    media queries - Come back later
 ========================================================================== */
 
+/*mobile*/
 @media only screen and (max-width: 768px) {
 
     .page-container {
@@ -139,6 +141,7 @@ h2::first-letter {
     }
 }
 
+/*Tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1123px)  {
 
     .page-container {
@@ -171,8 +174,19 @@ h2::first-letter {
    transform: none;
  }
 }
+/*To make page really look like a true CV if you print it out*/
+@media print { 
+    #openbtn, .main-menu, .footer { 
+    display: none !important; 
+    } 
 
-/*uncomment to use*/
+    .flex-container {
+        flex-direction: column;
+        width: 75vh;
+    }
+}
+/*uncomment to use
+*/
 //  @media (prefers-color-scheme: dark) { 
 //     html {
 //         color: white;

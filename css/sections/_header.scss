@@ -1,6 +1,7 @@
 /* ==========================================================================
    Header
 ========================================================================== */
+
 .main-menu {
     min-height: calc(10vh + 200px);
     width: 0;
@@ -8,40 +9,42 @@
     z-index: 1;
     background: rgb(61, 63, 66);
     background: radial-gradient(circle, rgba(61, 63, 66, 1) 0%, rgba(24, 22, 22, 1) 100%);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -112px 30px,
-        rgba(0, 0, 0, 0.12) 0px 14px 6px,
-        rgba(0, 0, 0, 0.17) 0px 112px 13px,
-        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -112px 30px, rgba(0, 0, 0, 0.12) 0px 14px 6px, rgba(0, 0, 0, 0.17) 0px 112px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     top: 0;
     right: 0;
     overflow-x: hidden;
     transition: 0.3s; /*Time it takes menu to open/close*/
     padding-top: 60px;
-}
+  
+    a {
+      padding: 0.5rem 0.5rem 0.5rem 2rem;
+      text-decoration: none;
+      font-size: 1.7rem;
+      color: $white;
+      display: block;
+      transition: 0.3s;
+  
+      &:hover {
+        color: $white;
+      }
+    }
+  
+    .closebtn {
+      cursor: pointer;
+      color: $blue;
+      position: absolute;
+      top: 1rem;
+      right: 25px;
+      font-size: 3rem;
+      margin-left: 50px;
 
-.main-menu a {
-    padding: 0.5rem 0.5rem 0.5rem 2rem;
-    text-decoration: none;
-    font-size: 1.7rem;
-    color: $white;
-    display: block;
-    transition: 0.3s;
-}
-
-.main-menu a:hover {
-    color: $white;
-}
-
-.main-menu .closebtn {
-    position: absolute;
-    top: 1rem;
-    right: 25px;
-    font-size: 3rem;
-    margin-left: 50px;
-}
-
-button {
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  
+  button {
     font-size: 50px;
     cursor: pointer;
     position: fixed;
@@ -50,19 +53,15 @@ button {
     font-size: 3rem;
     margin-left: 50px;
     background-color: $lightgray;
-    box-shadow: rgb(10, 10, 10) 3px 3px 6px 0px inset,
-        rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-
-}
-
-button:hover {
-    background-color: $white;
-    box-shadow: rgb(10, 10, 10) 3px 3px 6px 0px inset,
-        rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-
-}
-
-.name-header {
+    box-shadow: rgb(10, 10, 10) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  
+    &:hover {
+      background-color: $white;
+      box-shadow: rgb(10, 10, 10) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    }
+  }
+  
+  .name-header {
     font-family: "Dancing Script", cursive;
     color: $white;
     font-size: clamp(3rem, 10vw, 6rem); /*Responsive font-size*/
@@ -71,15 +70,15 @@ button:hover {
     right: 0;
     top: 3rem;
     margin: 0 auto;
-}
-
-.header {
+  }
+  
+  .header {
     grid-area: header;
     top: 0;
     width: 100%;
-}
-
-.logo-container {
+  }
+  
+  .logo-container {
     width: 100%;
     min-height: calc(10vh + 200px);
     text-align: center;
@@ -87,14 +86,10 @@ button:hover {
     top: 0;
     background: rgb(61, 63, 66);
     background: radial-gradient(circle, rgba(61, 63, 66, 1) 0%, rgba(24, 22, 22, 1) 100%);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px,
-        rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px,
-        rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.portrait-container img {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  
+  .portrait-container img {
     height: calc(125px + 6vw);
     width: calc(125px + 6vw);
     border: calc(2px + 0.2vw) solid transparent;
@@ -111,25 +106,25 @@ button:hover {
     top: 10rem;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: 40%;
-    background-image: url("/img/portrait.png"), linear-gradient(#cad6ce, #120a2e); /*might remove since img is already in HTML*/
-}
-
-.front-end-text {
+    background-image: url("img/portrait.png"), linear-gradient(#cad6ce, #120a2e);
+  }
+  
+  .front-end-text {
     position: absolute;
     left: 0;
     right: 0;
     top: 8rem;
     color: #f7f7f7;
-}
-
-.front-end-text span {
-    color: $blue;
-}
-
-.front-end-text::before {
-    content: "<";
-}
-
-.front-end-text::after {
-    content: "/>";
-}
+  
+    span {
+      color: $blue;
+    }
+  
+    &::before {
+      content: "<";
+    }
+  
+    &::after {
+      content: "/>";
+    }
+  }
