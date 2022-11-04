@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!--Font Awesome script for logos-->
-    <script src="https://kit.fontawesome.com/2eec9d03e4.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2eec9d03e4.js" crossorigin="anonymous" defer></script>
     <script src="js/menu.js" defer></script> <!--Defer will not execute script before page fully renders-->
 </head>
 
@@ -38,12 +38,12 @@
                 <p class="front-end-text">Front End <span>Developer</span></p>
                 <div class="portrait-container">
                     <img src="img/portraitme.jpg" alt="A portrait of Tim Sundell" width="200" height="200"
-                        loading="lazy">
+                        loading="lazy"> 
                 </div>
                 <!--Menu-->
                 <nav id="myMenu" class="main-menu">
                     <h3 class="hidden-content">The Menu</h3>
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+                    <p class="closebtn" onclick="closeMenu()">&times;</p>
                     <a href="#about-me" onclick="closeMenu()"> About me</a><!--Closes menu when clicked-->
                     <a href="#resume" onclick="closeMenu()">Resumé</a>
                     <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
@@ -130,7 +130,7 @@
                 </p>
             </article>
             <hr> 
-            <article class="Resumé" id="resume"><!--ID for anchor link-->
+            <article class="resume" id="resume"><!--ID for anchor link-->
                 <h2>Resumé</h2>
 
                 <p>
@@ -144,9 +144,7 @@
                 <p class="resume-desktop">To the right you can see a syllabus on
                     the current program im reading containing the 2 occasions 
                     got my  <abbr title="Lärande i arbete">LIA</abbr> period. 
-                    To the left you can see, among other things, some of the skills 
-                    I will posses be the end of this 2 years. Below you can see my 3 
-                    last major occupations. 
+                    Below you can see my 3 last major occupations. 
                 </p>
               
             </article> 
@@ -194,7 +192,7 @@
                         <td>3/v</td>
                     </tr>
                     <tr>
-                        <td>LIA 150p<i class="fa-regular fa-handshake"></i></td>
+                        <td>LIA 150p<i class="fa-regular fa-handshake"  title="cooperation opportunity"></i></td>
                         <td>10/v</td>
                     </tr>
                     <tr>
@@ -202,7 +200,7 @@
                         <td>6/v</td>
                     </tr>
                     <tr>
-                        <td>LIA 280p<i class="fa-regular fa-handshake"></i></td>
+                        <td>LIA 280p<i class="fa-regular fa-handshake" title="cooperation opportunity"></i></i></td>
                         <td>16/v</td>
                     </tr>
                     <tr>
@@ -216,7 +214,7 @@
                     </tr>
                     <tr>
                         <td>This is where I would like to meet you --></td>
-                        <td><i class="fa-regular fa-handshake"></i></td>
+                        <td><i class="fa-regular fa-handshake" title="cooperation opportunity"></i></i></td>
 
                     </tr>
                 </table>
@@ -320,7 +318,7 @@
                         Make sure to come back in the future to see the "stand-alone" verison of my portfolio. 
                     </p>
                     <p>
-                      <a href="https://github.com/existenztim" target="_blank"> <i class="fa-brands fa-github" rel="noopener noreferrer"></i> My Github <i class="fa-brands fa-github"></i></a>
+                      <a href="https://github.com/existenztim" target="_blank"> <i class="fa-brands fa-github" aria-hidden="true" rel="noopener noreferrer"></i> My Github <i class="fa-brands fa-github" aria-hidden="true" rel="noopener noreferrer"></i></a>
                     </p>
                 </article>
             </section>
@@ -346,16 +344,14 @@
                         <a href="https://www.facebook.com/tim.sundell.3/" aria-label="Go to my facebook page"
                             target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
                     </div>
-                    <!-- <a href="https://www.linkedin.com/in/tim-sundell-87b644252/" target="_blank">My linkedin profile</a><br>
-                         <a href="tim.sundell@medieinstitutet.se">tim.sundell@medieinstitutet.se</a><br>
-                         <a href="tel:+4672-xxxxxxx">(+46) 72-xxxxxxx</a> -->
+                   
                 </address>
             </footer>
         </div>
     </div>
-    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/vendor/modernizr-3.11.2.min.js" defer></script>
+    <script src="js/plugins.js" defer></script>
+    <script src="js/main.js" defer></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
@@ -366,4 +362,3 @@
 </body>
 
 </html>
-<!-- innan du lämnar in, validera filen på https://validator.w3.org/#validate_by_upload -->
