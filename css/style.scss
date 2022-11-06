@@ -2,16 +2,16 @@
    Tim Sundell CV with CSS. An attempt to emulate the look of a CV as a
    webpage. 
 ========================================================================== */
-$blue:#3d74a8;
-$white:#f7f7f7;
-$gray:#3d3f42;
-$lightgray:#dfdede88;
+$blue: #3d74a8;
+$white: #f7f7f7;
+$gray: #3d3f42;
+$lightgray: #dfdede88;
 $black: #181616;
 /*boilerplates*/
-@import "vendors/normalize"; 
+@import "vendors/normalize";
 @import "vendors/boilerplate-main";
 /*original*/
-@import "sections/header"; 
+@import "sections/header";
 @import "sections/aside-inline-start";
 @import "sections/introduction";
 @import "sections/occupation";
@@ -35,7 +35,7 @@ body {
     background-color: $white;
     line-height: 1.6rem;
     font-family: "EB Garamond", serif, "Times New Roman", sans-serif;
-    
+
     font-size: 1.1rem;
 }
 
@@ -64,7 +64,7 @@ article {
 
     ul {
         list-style: none;
-    }   
+    }
 }
 
 h2::first-letter {
@@ -74,7 +74,7 @@ h2::first-letter {
 
 .hidden-content {
     visibility: hidden;/*Not to be shown, only to make outliner look good*/
-    width: 0; /*We want the semantic value but without taking space*/
+    width: 0;/*We want the semantic value but without taking space*/
 }
 
 .skip-to-content-link {
@@ -90,7 +90,7 @@ h2::first-letter {
         transform: translateY(0%);
         z-index: 10;
     }
-}        
+}
 
 /* ==========================================================================
    media queries
@@ -104,26 +104,26 @@ h2::first-letter {
         grid-template-columns: 1fr;
         gap: 0px 0px;
         grid-template-areas:
-        "header"
-        "aside-start" 
-        "introduction"
-        "aside-end"
-        "occupation "
-        "footer";
+            "header"
+            "aside-start"
+            "introduction"
+            "aside-end"
+            "occupation "
+            "footer";
     }
 
     .aside-start {
         display: none;
     }
 
-    .aside-end{
+    .aside-end {
         text-align: center;
         margin: auto;
     }
 
     .flex-container {
         flex-direction: column;
-    }   
+    }
 
     .introduction {
         padding: 2rem;
@@ -141,7 +141,7 @@ h2::first-letter {
 }
 
 /*Tablet*/
-@media only screen and (min-width: 768px) and (max-width: 1123px)  {
+@media only screen and (min-width: 768px) and (max-width: 1123px) {
 
     .page-container {
         display: grid;
@@ -154,8 +154,8 @@ h2::first-letter {
             "aside-start occupation"
             "footer footer ";
     }
-    
-    .aside-end{
+
+    .aside-end {
         text-align: center;
         margin: auto;
     }
@@ -167,23 +167,28 @@ h2::first-letter {
 
 /*Accessibility*/
 @media (prefers-reduced-motion: reduce) {
- * {
-   animation: none;
-   transition: none;
-   transform: none;
- }
+    * {
+        animation: none;
+        transition: none;
+        transform: none;
+    }
 }
+
 /*To make page really look like a true CV if you print it out*/
-@media print { 
-    #openbtn, .main-menu, .footer { 
-    display: none !important; 
-    } 
+@media print {
+
+    #openbtn,
+    .main-menu,
+    .footer {
+        display: none !important;
+    }
 
     .flex-container {
         flex-direction: column;
         width: 75vh;
     }
 }
+
 /*uncomment to use
 */
 //  @media (prefers-color-scheme: dark) { 

@@ -19,13 +19,14 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=EB+Garamond:wght@400;500;600&display=swap" 
-        as="style" onload="this.onload=null;this.rel='stylesheet'"> <!--To speed up page parsing-->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=EB+Garamond:wght@400;500;600&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'"><!--To speed up page parsing-->
     <link rel="stylesheet" href="css/style.css">
 
     <!--Font Awesome script for logos-->
     <script src="https://kit.fontawesome.com/2eec9d03e4.js" crossorigin="anonymous" defer></script>
-    <script src="js/menu.js" defer></script> <!--Defer will not execute script before page fully renders-->
+    <script src="js/menu.js" defer></script><!--Defer will not execute script before page fully renders-->
 </head>
 
 <body>
@@ -37,17 +38,17 @@
                 <p class="front-end-text">Front End <span>Developer</span></p>
                 <div class="portrait-container">
                     <img src="img/portraitme.webp" alt="A portrait of Tim Sundell" width="200" height="200"
-                        loading="lazy"> 
+                        loading="lazy">
                 </div>
                 <!--Menu-->
-                <nav id="myMenu" class="main-menu">
-                    <h3 class="hidden-content">The Menu</h3>
+                <a id="myMenu" class="main-menu">
+                    <h2 class="hidden-content">The Menu</h2>
                     <p class="closebtn" onclick="closeMenu()">&times;</p>
                     <a href="#about-me" onclick="closeMenu()"> About me</a><!--Closes menu when clicked-->
                     <a href="#resume" onclick="closeMenu()">Resumé</a>
                     <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
                     <a href="#contact-me" onclick="closeMenu()">Contact me</a>
-                </nav>
+                </a>
 
                 <button id="openbtn" aria-label="Open menu for internal links" onclick="openMenu()">&#9776;</button><!--&#9776; = unicode "trigram for heaven"-->
             </header>
@@ -59,13 +60,12 @@
                 <h3>Personal Info</h3>
                 <p>Age : 30.</p>
                 <address class="contact-info">
-                    <!--Adress not allowed inside section/div/aside-->
                     <p class="tel-info">Phone Number :<a href="tel:+1234567891">(123) 456-7891</a></p>
                     <p class="mail-info">Mail : <a href="mailto:john@doe.com">john@doe.com</a></p>
                     <p class="location-info">Location : Stockholm, Sweden.</p>
                 </address>
             </section>
-            <hr>  
+            <hr>
             <aside class="skills-inprogress">
                 <h3>Skills inprogress</h3>
                 <ul>
@@ -80,7 +80,7 @@
                     <li>Vue</li>
                 </ul>
             </aside>
-            <hr> 
+            <hr>
             <aside class="education">
                 <h3>Education</h3>
 
@@ -101,7 +101,7 @@
                 </details>
 
             </aside>
-            <hr> 
+            <hr>
             <aside class="languages">
                 <h3>Languages</h3>
                 <ul>
@@ -115,8 +115,7 @@
         </div>
         <!--center column, row 1-->
         <div class="introduction">
-            <article class="about-me" id="about-me">
-                <!--ID for anchor link-->
+            <article class="about-me" id="about-me"><!--ID for anchor link-->
                 <h2>About Me</h2>
                 <p>
                     Front End student at Medieinstitutet in Stockholm in search of LIA/practice.
@@ -128,7 +127,7 @@
                     with my dog and hiking.
                 </p>
             </article>
-            <hr> 
+            <hr>
             <article class="resume" id="resume"><!--ID for anchor link-->
                 <h2>Resumé</h2>
 
@@ -137,16 +136,16 @@
                 </p>
                 <p class="resume-mobile">Below you fill first find a syllabus
                     on the current program im reading containing the 2 occasions
-                    I got my <abbr title="Lärande i arbete">LIA</abbr> period. Further 
-                    down you can see my 3 last major occupations. 
+                    I got my <abbr title="Lärande i arbete">LIA</abbr> period. Further
+                    down you can see my 3 last major occupations.
                 </p>
                 <p class="resume-desktop">To the right you can see a syllabus on
-                    the current program im reading containing the 2 occasions 
-                    got my  <abbr title="Lärande i arbete">LIA</abbr> period. 
-                    Below you can see my 3 last major occupations. 
+                    the current program im reading containing the 2 occasions
+                    got my <abbr title="Lärande i arbete">LIA</abbr> period.
+                    Below you can see my 3 last major occupations.
                 </p>
-              
-            </article> 
+
+            </article>
         </div>
         <!--right column-->
         <div class="aside-end">
@@ -191,7 +190,7 @@
                         <td>3/v</td>
                     </tr>
                     <tr>
-                        <td>LIA 150p<i class="fa-regular fa-handshake"  title="cooperation opportunity"></i></td>
+                        <td>LIA 150p<i class="fa-regular fa-handshake" title="cooperation opportunity"></i></td>
                         <td>10/v</td>
                     </tr>
                     <tr>
@@ -234,8 +233,8 @@
                         <li class="bold-paragraph">Front End Student</li>
                     </ul>
                     <p>
-                        I will study a 2 year program for a totalt of 200YH points. Some of the skills I will master you 
-                        can see at the "skills in progress" bar to the left. 
+                        I will study a 2 year program for a totalt of 200YH points. Some of the skills I will master you
+                        can see at the "skills in progress" bar to the left.
                         To the right you can se the syllabus of the full program and how many weeks each course is.
                     </p>
                 </article>
@@ -292,13 +291,18 @@
                         <li class="bold-paragraph">Process Operator</li>
                     </ul>
                     <p>
-                        As a process operator I had a crucial role in the production flow at the Lantmännen Factory in Järna. 
-                        I was the link between the team that produced the products and the team that was in control of the packaging.<br><br>
+                        As a process operator I had a crucial role in the production flow at the Lantmännen Factory in
+                        Järna.
+                        I was the link between the team that produced the products and the team that was in control of
+                        the packaging.<br><br>
 
-                        I did this by making sure there was always a constant flow of materials on every line and so every compartment 
-                        could do there tasks simultaneously even though they where at differents steps in the whole productions process. 
-                        This is something I hope I can apply in the world of web development aswell, where it's crucial to work agile to finish 
-                        things before dealine. 
+                        I did this by making sure there was always a constant flow of materials on every line and so
+                        every compartment
+                        could do there tasks simultaneously even though they where at differents steps in the whole
+                        productions process.
+                        This is something I hope I can apply in the world of web development aswell, where it's crucial
+                        to work agile to finish
+                        things before dealine.
 
                     </p>
                 </article>
@@ -314,10 +318,12 @@
                     <h2>Portfolio</h2>
                     <p>
                         As for now I refer to my github page.
-                        Make sure to come back in the future to see the "stand-alone" verison of my portfolio. 
+                        Make sure to come back in the future to see the "stand-alone" verison of my portfolio.
                     </p>
                     <p>
-                      <a href="https://github.com/existenztim" target="_blank"> <i class="fa-brands fa-github" aria-hidden="true" rel="noopener noreferrer"></i> My Github <i class="fa-brands fa-github" aria-hidden="true" rel="noopener noreferrer"></i></a>
+                        <a href="https://github.com/existenztim" target="_blank"> <i class="fa-brands fa-github"
+                                aria-hidden="true" rel="noopener noreferrer"></i> My Github <i
+                                class="fa-brands fa-github" aria-hidden="true" rel="noopener noreferrer"></i></a>
                     </p>
                 </article>
             </section>
@@ -336,14 +342,14 @@
                             target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                     <div>
-                        <a href="https://www.instagram.com/existenztim/" aria-label="Go to my instagram page" 
-                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.instagram.com/existenztim/" aria-label="Go to my instagram page"
+                            target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram"></i></a>
                     </div>
                     <div>
                         <a href="https://www.facebook.com/tim.sundell.3/" aria-label="Go to my facebook page"
                             target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
                     </div>
-                   
+
                 </address>
             </footer>
         </div>

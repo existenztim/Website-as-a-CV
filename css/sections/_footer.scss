@@ -3,7 +3,7 @@
 ========================================================================== */
 .footer {
     grid-area: footer;
-    padding-bottom: 3rem;  
+    padding-bottom: 3rem;
     background-color: $black;
     color: $white;
 }
@@ -24,10 +24,12 @@
     justify-content: center;
     background-color: $black;
     gap: 2rem;
-    font-size: 2rem;                                             
+    font-size: 2rem;
 }
 
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
     color: $blue;
 }
 
