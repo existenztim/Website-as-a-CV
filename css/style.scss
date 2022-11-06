@@ -29,7 +29,6 @@ html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    /* Migth remove --> scroll-margin-top: calc(10vh + 200px); So anchor links align correct while menu is open */
 }
 
 body {
@@ -75,7 +74,7 @@ h2::first-letter {
 
 .hidden-content {
     visibility: hidden;/*Not to be shown, only to make outliner look good*/
-    font-size: 0; /*We want the semantic value but without taking space*/
+    width: 0; /*We want the semantic value but without taking space*/
 }
 
 .skip-to-content-link {
@@ -94,7 +93,7 @@ h2::first-letter {
 }        
 
 /* ==========================================================================
-   media queries - Come back later
+   media queries
 ========================================================================== */
 
 /*mobile*/

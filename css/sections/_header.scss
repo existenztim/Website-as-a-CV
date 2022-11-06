@@ -1,13 +1,13 @@
 /* ==========================================================================
    Header
 ========================================================================== */
-
+/*Menu*/
 .main-menu {
   min-height: calc(10vh + 200px);
   width: 0;
   position: fixed;
   z-index: 1;
-  background: rgb(61, 63, 66);
+  background: rgb(0, 0, 0);
   background: radial-gradient(circle, rgba(61, 63, 66, 1) 0%, rgba(24, 22, 22, 1) 100%);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -112px 30px, rgba(0, 0, 0, 0.12) 0px 14px 6px, rgba(0, 0, 0, 0.17) 0px 112px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   top: 0;
@@ -60,7 +60,7 @@ button {
     box-shadow: rgb(10, 10, 10) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   }
 }
-
+/*Signature/portrait*/
 .name-header {
   font-family: "Dancing Script", cursive;
   color: $white;
